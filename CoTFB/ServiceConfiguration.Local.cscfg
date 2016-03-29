@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="CoTFB" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="CoTFBWebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="ImageStore" value="DefaultEndpointsProtocol=https;AccountName=andreasstorage0175;AccountKey=N6PyVGAaxFl8qjjvmYqjrgHxW+Sk0eaUwYnD6qyZa40AvGCQQfIOzV3J/p6E6Jtybt0Y8q9fo+sdcHWpSnaZVw==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

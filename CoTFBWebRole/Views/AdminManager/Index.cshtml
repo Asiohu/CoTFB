@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CoTFBWebRole.Models.UserViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List of users</h2>
+
+
+<table class="table" >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.Label("Edit or Delete")
+        </th>
+    </tr>
+   @foreach(var user in Model) {
+    <tr>
+        <td>
+            @user.FirstName 
+        </td>
+        <td>
+            @user.Username
+        </td>
+        <td>
+            @user.City
+        </td>
+        <td>
+            @user.Country
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=user.UserId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=user.UserId })
+        </td>
+    </tr>
+     } 
+</table>
+
+
+
+
